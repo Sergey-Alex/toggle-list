@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #p {
+        cursor: pointer;
+    }
+
+    #list {
+        display: none;
+    }
+
+    #list.active {
+        display: block;
+    }
+</style>
+<body>
+<p id="p">List</p>
+<ul id="list">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+</ul>
+<script>
+    let p = document.getElementById('p');
+    let list = document.getElementById('list');
+    p.addEventListener('click', function () {
+        list.classList.toggle('active');
+    })
+
+</script>
+</body>
+</html>
